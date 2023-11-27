@@ -30,11 +30,22 @@ App = {
       }
     });
 
+    $(document).ready(function() {
+      $("#newItemButton").click(function() {
+        $("#newItemForm").show();
+      });
+    
+      $("#newItemForm form").submit(function(e) {
+        e.preventDefault();
+        // Add code here to handle the form submission.
+        $("#newItemForm").hide();
+      });
+    });
+
     return await App.initWeb3();
   },
 
   // Function to intialize web3
-  // Refer to PetShop tutorial documentation (https://www.trufflesuite.com/tutorials/pet-shop)
   initWeb3: async function() {
     if (window.ethereum) {
       App.web3Provider = window.ethereum;

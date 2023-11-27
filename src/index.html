@@ -30,12 +30,30 @@
             <button class="btn btn-success ml-auto mr-1 account-button">Account: <span class="nav-link" id="account"></span></button>       
           </div>
         </div>
+
+        <button id="newItemButton" class="btn btn-success ml-auto mr-1">New Item</button>
         
     </nav>
       
       <div class="container">
         <div id="artRow" class="row justify-content">
           <!--Art loads here-->
+
+          <div id="newItemForm" style="display: none;">
+            <form>
+              <label for="address">Address:</label><br>
+              <input type="text" id="address" name="address"><br>
+              <label for="bedrooms">Number of bedrooms:</label><br>
+              <input type="number" id="bedrooms" name="bedrooms"><br>
+              <label for="bathrooms">Number of bathrooms:</label><br>
+              <input type="number" id="bathrooms" name="bathrooms"><br>
+              <label for="price">Price:</label><br>
+              <input type="number" id="price" name="price"><br>
+              <label for="description">Description:</label><br>
+              <textarea id="description" name="description"></textarea><br>
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
 
