@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>The Fine Art Gallery</title>
+    <title>CSE 598 Project: Housing Auction Marketplace</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
         <div class="container">
           <a class="navbar-brand" href="#">
             <i class="fas fa-paint-brush"></i>
-            The Fine Art Gallery
+            CSE 598 Project: Housing Auction Marketplace
           </a> 
           <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
             <button class="btn btn-success ml-auto mr-1 account-button">Account: <span class="nav-link" id="account"></span></button>       
@@ -41,19 +41,20 @@
 
           <div id="newItemForm" style="display: none;">
             <form>
-              <label for="address">Address:</label><br>
-              <input type="text" id="address" name="address"><br>
-              <label for="bedrooms">Number of bedrooms:</label><br>
-              <input type="number" id="bedrooms" name="bedrooms"><br>
-              <label for="bathrooms">Number of bathrooms:</label><br>
-              <input type="number" id="bathrooms" name="bathrooms"><br>
-              <label for="price">Price:</label><br>
-              <input type="number" id="price" name="price"><br>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name"><br>
+              <label for="picture">Picture:</label><br>
+              <input type="text" id="picture" name="picture"><br>
               <label for="description">Description:</label><br>
               <textarea id="description" name="description"></textarea><br>
+              <label for="minimum_increment">Minimum Increment:</label><br>
+              <input type="number" id="minimum_increment" name="minimum_increment"><br>
+              <label for="original_price">Original Price:</label><br>
+              <input type="number" id="original_price" name="original_price"><br>
               <button type="submit" class="btn btn-dark">Submit</button>
             </form>
           </div>
+
         </div>
       </div>
 

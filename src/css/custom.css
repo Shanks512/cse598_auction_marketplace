@@ -1,7 +1,7 @@
 /* Button Stuff */
 .btn-dark {
-    background-color: #2C3E50 !important;
-    border-color: #7b8a8b;
+    background-color: rgb(82, 26, 4) !important;
+    border-color: #552d9e;
 }
 
 /* Navbar Stuff */
@@ -10,7 +10,7 @@
 }
 
 .bg-colored {
-    background: #2C3E50 !important;
+    background: rgb(78, 33, 110) !important;
 }
 
 .fa-paint-brush {

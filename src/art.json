@@ -30,6 +30,14 @@
         "description": "Elegant penthouse in the heart of the city with panoramic skyline views.",
         "minimum_increment": "15000",
         "original_price": "120000"
+    },
+    {
+        "id": 4,
+        "name": "Castle",
+        "picture": "images/historic_castle.jpg",
+        "description": "Big Castle",
+        "minimum_increment": "25000",
+        "original_price": "300000"
     }
 ]
   

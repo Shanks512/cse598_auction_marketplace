@@ -31,10 +31,10 @@ contract Auction {
 
 	// Constructor
 	constructor() public {	
-		addItem("Vase", "18th Century lost masterpiece with blue-and-white floral design", 20, 2, 20);
-		addItem("Mona Lisa", "Famous painting by the Italian artist, Leonardo da Vinci. Just beautiful!", 200, 20, 200);
-		addItem("Starry Night", "A Van Gogh classic depicting a beautiful starry night using pastels.", 150, 35, 150);
-		addItem("Liberty Leading the People", "Delacroix painting commemorating the July Revolution of 1830 in France", 1000, 100, 1000);
+		addItem("Victorian Mansion", "Impressive Victorian-era mansion with intricate architecture and spacious interiors", 20, 2, 20);
+		addItem("Beachfront Villa", "Luxurious beachfront villa with stunning ocean views and modern amenities", 200, 20, 200);
+		addItem("Mountain Retreat", "Cozy mountain retreat surrounded by nature, perfect for a peaceful getaway.", 150, 35, 150);
+		addItem("City Penthouse", "Elegant penthouse in the heart of the city with panoramic skyline views", 1000, 100, 1000);
 	}
 	
 

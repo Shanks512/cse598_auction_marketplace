@@ -13,7 +13,7 @@ App = {
       var artRow = $('#artRow');
       var artTemplate = $('#artTemplate');
 
-      for (i = 0; i < data.length; i ++) {
+      for (i = 0; i < 4; i ++) {
         // Adding data from json
         artTemplate.find('.panel-title').text(`Auction ${i+1}`); // auction number as title
         artTemplate.find('img').attr('src', data[i].picture); // image 
@@ -37,8 +37,30 @@ App = {
     
       $("#newItemForm form").submit(function(e) {
         e.preventDefault();
-        // Add code here to handle the form submission.
+
         $("#newItemForm").hide();
+
+        $.getJSON('../art.json', function(data) {
+          i = 4;
+          var artRow = $('#artRow');
+          var artTemplate = $('#artTemplate');
+    
+          // Adding data from json
+          artTemplate.find('.panel-title').text(`Auction ${i+1}`); // auction number as title
+          artTemplate.find('img').attr('src', data[i].picture); // image 
+          artTemplate.find('.art-name').text(data[i].name); // name of item 
+          artTemplate.find('.art-description').text(data[i].description); // decription of the item
+          artTemplate.find('.min-incr').text(`$${data[i].minimum_increment}`); // minimum increment
+          artTemplate.find('.base-price').text(`Started at $${data[i].original_price}`); // base price
+  
+          // Creating identifier attributes for HTML elements
+          artTemplate.find('.highest-bid').attr('data-id', data[i].id); // adding attribute to the highest bid so we can dynamically change it
+          artTemplate.find('.btn-submit').attr('data-id', data[i].id); // adding attribute for submit so we can associate itemids to submit buttons
+          artTemplate.find('.input-amount').attr('id',`input-amt-${data[i].id}`); // same as above for input amount
+          artRow.append(artTemplate.html());
+        });
+
+        
       });
     });
 
@@ -73,7 +95,6 @@ App = {
   },
 
   // Function to initialize contract
-  // Refer to PetShop tutorial documentation (https://www.trufflesuite.com/tutorials/pet-shop)
   initContract: function() {
     $.getJSON('Auction.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
